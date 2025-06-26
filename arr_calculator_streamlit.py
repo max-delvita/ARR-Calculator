@@ -208,7 +208,7 @@ if st:
         )
     with col3:
         market_share_pct = st.slider(
-            "Market Share of SEA STR Market (%)", 
+            "Market Share of SEA STR Market (%) - 248K STR Properties", 
             1, 30, 
             value=15 if not st.session_state.reset else 15,
             key='market_share_slider'
@@ -220,7 +220,7 @@ if st:
         st.rerun()
     
     # Flat fee note
-    st.caption("💡 Note: The flat fee is $25 per host per month ($300 per year), plus 3% commission on direct bookings.")
+    st.caption("Note: The flat fee is $25 per host per month ($300 per year), plus 3 percent commission on direct bookings.")
 
     # Sensitivity variables
     occupancy_range = range(50, 101, 10)  # 50% to 100%
