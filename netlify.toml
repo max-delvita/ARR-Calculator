@@ -1,0 +1,16 @@
+[build]
+  command = "pip install -r requirements.txt && python -m streamlit run arr_calculator_streamlit.py --server.port=$PORT --server.address=0.0.0.0"
+  publish = "."
+
+[dev]
+  command = "streamlit run arr_calculator_streamlit.py"
+  port = 8501
+  targetPort = 8501
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+
+[build.environment]
+  PYTHON_VERSION = "3.9"
